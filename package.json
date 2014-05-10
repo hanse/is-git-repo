@@ -1,14 +1,12 @@
 {
   "name": "is-git-repo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "check if a directory is a git repo",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "async": "~0.8.0"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "test": "mocha test/index.js"

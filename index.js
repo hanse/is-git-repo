@@ -1,8 +1,10 @@
 var fs = require('fs');
-var async = require('async');
 
 module.exports = function(file, fn) {
-  async.some([file + '/.git', file + '/HEAD'], fs.exists, function(exists) {
-    fn(exists);
+  fs.exists(file + '/.git', function(exists) {
+    if (exists) return fn(exists);
+    fs.exists(file + '/HEAD', function(exists) {
+      fn(exists);
+    });
   });
 };
