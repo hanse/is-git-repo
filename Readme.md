@@ -9,3 +9,6 @@ isGitRepo('/home/user/my-repo', function(git) {
 ```
 
 Supports both regular and bare repositories.
+
+# License
+MIT
